@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,6 +10,22 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.permanent-marker {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.nav-item-padding {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+/* colors
+  E39774  orange cream
+  EEEEEE  grey
+  326273  dark blue
+  FFFFFF  white
+  5C9EAD  light blue
+*/

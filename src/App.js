@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
+import { Container } from 'reactstrap'
 
-function App() {
+import Dashboard from './features/dashboard/Dashboard';
+import Login from './features/login/Login';
+import Navbar from './features/navbar/Navbar';
+
+const NoMatch = () => {
+  let location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container style={{marginTop: '3%'}}>
+        <h3>
+          No match for <code>{location.pathname}</code>
+        </h3>
+      </Container>
+    </>
   );
 }
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/login" component={Login} />
+        <Route path="*" component={NoMatch} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
 export default App;
