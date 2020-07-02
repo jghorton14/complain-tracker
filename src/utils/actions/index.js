@@ -1,12 +1,8 @@
-let nextTodoId = 0
+export const actionTypes = {
+  saveGoogleUser: "SAVE_GOOGLE_USER"
+}
 
-export const addTodo = text => ({
-  type: 'ADD_TODO',
-  id: nextTodoId++,
-  text
-})
-
-export const toggleTodo = id => ({
-  type: 'TOGGLE_TODO',
-  id
-})
+export const saveGoogleUser = user => ({
+  type: actionTypes.saveGoogleUser,
+  user
+});

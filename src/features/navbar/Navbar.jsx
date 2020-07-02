@@ -18,7 +18,7 @@ const NavigationBar = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    console.log('navBar')
+    // TODO grab from state, not from local storage
     const userObjectFromLocalStorage = getLocalStorageObject();
     if (userObjectFromLocalStorage !== null) {
       setUserObj(userObjectFromLocalStorage);

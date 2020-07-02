@@ -4,8 +4,7 @@ import { Container, Row, Col } from 'reactstrap'
 import NavigationBar from '../navbar/Navbar';
 import GLogin from '../login/GoogleLogin'
 
-const Login = ({ dispatch }) => {
-  console.log('login props', dispatch);
+const Login = () => {
   return (
     <div>
       <div style={{ background: '#5C9EAD' }}>
