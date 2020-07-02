@@ -22,7 +22,7 @@ const NoMatch = () => {
   );
 };
 
-const App = (props) => {
+const App = ({ login }) => {
   return (
     <BrowserRouter>
       <Navbar />
@@ -37,4 +37,6 @@ const App = (props) => {
   );
 };
 
-export default connect()(App);
+const mapStateToProps = (state) => ({ login: state.login });
+
+export default connect(mapStateToProps)(App);
