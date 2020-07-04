@@ -22,6 +22,10 @@ code {
   padding-left: 40px;
 }
 
+html, body {
+  height: 100%;
+}
+
 /* colors
   E39774  orange cream
   EEEEEE  grey
