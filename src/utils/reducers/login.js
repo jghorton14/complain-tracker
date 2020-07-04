@@ -1,10 +1,16 @@
 import { actionTypes } from "../actions/index";
 
-const login = (state = {}, action) => {
-  if (actionTypes.saveGoogleUser) {
+const initialState = {
+  user: {},
+  isAuth: false
+}
+
+const login = (state = initialState, action) => {
+  if (action.type === actionTypes.saveGoogleUser) {
     return {
       ...state,
       user: action.user,
+      isAuth: true,
     };
   } else {
     return state;

@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
 
-const isAuthenticated = (login) => login.user !== undefined;
+const isAuthenticated = (login) => login.isAuth;
 
 /**
  * Make sure that the user is authenticated before giving access to route
