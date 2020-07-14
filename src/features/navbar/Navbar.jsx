@@ -35,9 +35,26 @@ const NavigationBar = ({ login }) => {
             </NavItem>
           </Nav>
           {!isOpen && (
-            <NavbarText>
-              <img src={login.user.profileObj.imageUrl} alt="Avatar" style={{ borderRadius: '50%', height: '3vh' }} referrerPolicy="no-referrer" />
-            </NavbarText>
+            <UncontrolledDropdown inNavbar>
+              <DropdownToggle nav>
+                <NavbarText>
+                  <img src={login.user.profileObj.imageUrl} alt="Avatar" style={{ borderRadius: '50%', height: '3vh' }} referrerPolicy="no-referrer" />
+                </NavbarText>
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                  Profile
+                </DropdownItem>
+                {/* TODO Add Later */}
+                <DropdownItem>
+                  Light / Dark Theme
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>
+                  Logout
+              </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
           )}
         </Collapse>
       </Navbar>
