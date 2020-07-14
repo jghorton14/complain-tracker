@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavbarText } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavbarText, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { connect } from "react-redux";
@@ -20,7 +20,7 @@ const NavigationBar = ({ login }) => {
 
   if (login.isAuth) {
     return (
-      <Navbar expand="md" className="permanent-marker" style={{ backgroundColor: "#f1f1f1", padding: '30px' }}>
+      <Navbar light expand="md" className="permanent-marker" style={{ backgroundColor: "#f1f1f1", padding: '30px' }}>
         <Link to="/" style={{ textDecoration: 'none', color: '#E39774' }}>
           <h1>Complain Tracker</h1>
         </Link>
