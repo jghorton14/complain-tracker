@@ -4,13 +4,10 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { connect } from "react-redux";
 
-import { getLocalStorageObject } from '../../utils/localstorage';
-
 /**
  * TODO:
  * After auth, then add items to the the navbar,
  * 1) add complaint, 
- * 2) Dashboard
  * 3) User settings
  */
 const NavigationBar = ({ login }) => {
@@ -30,6 +27,9 @@ const NavigationBar = ({ login }) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar style={{}}>
+            <NavItem className={isOpen ? null : 'nav-item-padding'}>
+              <Link to="/Dashboard" style={{ textDecoration: 'none', color: '#E39774' }}>Dashboard</Link>
+            </NavItem>
             <NavItem className={isOpen ? null : 'nav-item-padding'}>
               <Link to="/add-compliment" style={{ textDecoration: 'none', color: '#E39774' }}>Add Compliment</Link>
             </NavItem>

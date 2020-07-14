@@ -2,17 +2,10 @@ import React, { useState, useReducer } from "react";
 import { connect } from "react-redux";
 import { Card, CardBody, CardTitle, CardText, Container } from "reactstrap"
 import { Link } from "react-router-dom";
-
-import NavigationBar from "../navbar/Navbar";
-import { getLocalStorageObject } from "../../utils/localstorage";
 import { useEffect } from "react";
 
 const Dashboard = ({ login }) => {
-
-  useEffect(() => {
-    // Fix this...
-    console.log(getLocalStorageObject());
-  }, []);
+  console.log('Dashboard login', login)
 
   return (
     <Container style={{ marginTop: '2%' }}>

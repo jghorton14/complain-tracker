@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap'
 
-import NavigationBar from '../navbar/Navbar';
 import GLogin from '../login/GoogleLogin'
 
 const Login = () => {

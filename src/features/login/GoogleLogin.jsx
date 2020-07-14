@@ -5,16 +5,10 @@ import { connect } from "react-redux";
 
 import { clientId } from "../../secrets.js";
 import { saveLocalStorageObject } from "../../utils/localstorage";
-import { useEffect } from "react";
 import { saveGoogleUser } from "../../utils/actions/index";
-import Navbar from "../navbar/Navbar";
 
 const GLogin = ({ dispatch }) => {
   const history = useHistory();
-
-  useEffect(() => {
-    window.localStorage.clear();
-  }, []); 
 
   const responseGoogle = (response) => {
     if (response.hasOwnProperty("tokenObj")) {

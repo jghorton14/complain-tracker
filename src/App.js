@@ -23,6 +23,7 @@ const NoMatch = () => {
 };
 
 const App = ({ login }) => {
+  console.log('app', login)
   return (
     <BrowserRouter>
       <Navbar />
