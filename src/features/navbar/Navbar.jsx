@@ -28,7 +28,7 @@ const NavigationBar = ({ login }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar style={{}}>
             <NavItem className={isOpen ? null : 'nav-item-padding'}>
-              <Link to="/Dashboard" style={{ textDecoration: 'none', color: '#E39774' }}>Dashboard</Link>
+              <Link to="/dashboard" style={{ textDecoration: 'none', color: '#E39774' }}>Dashboard</Link>
             </NavItem>
             <NavItem className={isOpen ? null : 'nav-item-padding'}>
               <Link to="/add-compliment" style={{ textDecoration: 'none', color: '#E39774' }}>Add Compliment</Link>

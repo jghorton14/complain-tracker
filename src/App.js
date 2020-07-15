@@ -31,7 +31,6 @@ const App = ({ login }) => {
         <Route exact path="/" component={Intro} />
         <Route exact path="/login" component={Login} />
         <SecuredRoute exact path="/dashboard" component={Dashboard} />
-
         <Route path="*" component={NoMatch} />
       </Switch>
     </BrowserRouter>
