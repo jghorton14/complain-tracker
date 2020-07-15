@@ -1,8 +1,7 @@
-import React, { useState, useReducer } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Card, CardBody, CardTitle, CardText, Container } from "reactstrap"
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const Dashboard = ({ login }) => {
   console.log('Dashboard login', login)
@@ -10,7 +9,7 @@ const Dashboard = ({ login }) => {
   return (
     <Container style={{ marginTop: '2%' }}>
       {/* Charts and graphs */}
-      <Link to="/add-compliment" style={{textDecoration: 'none', color: 'black', }}>
+      <Link to="/add-complaint" style={{textDecoration: 'none', color: 'black', }}>
         <Card style={{ cursor: 'pointer', borderRadius: '.5rem' }} className="box-shadow">
           <CardBody>
             <CardTitle style={{fontSize:"1.5rem"}}>Add a Complaint</CardTitle>

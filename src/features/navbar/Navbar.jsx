@@ -31,7 +31,7 @@ const NavigationBar = ({ login }) => {
               <Link to="/dashboard" style={{ textDecoration: 'none', color: '#E39774' }}>Dashboard</Link>
             </NavItem>
             <NavItem className={isOpen ? null : 'nav-item-padding'}>
-              <Link to="/add-compliment" style={{ textDecoration: 'none', color: '#E39774' }}>Add Compliment</Link>
+              <Link to="/add-complaint" style={{ textDecoration: 'none', color: '#E39774' }}>Add Complaint</Link>
             </NavItem>
           </Nav>
           {!isOpen && (
